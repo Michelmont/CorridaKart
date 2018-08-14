@@ -6,7 +6,7 @@ public class Main {
 	
 	public static void main(String[] args) {
 		
-		SCorridaFactory factory = new CorridaFactory("C:\\Users\\User\\eclipse-workspace\\CorridaDeKart\\src\\TestLayer\\CorridaTest.txt");
+		CorridaFactory factory = new CorridaFactory("C:\\Users\\User\\eclipse-workspace\\CorridaDeKart\\src\\TestLayer\\CorridaTest.txt");
 		Corrida corrida = factory.ObterCorridaDoArquivoDeLog();
 		
 		List<Resultado> resultados = new ArrayList<Resultado>();
