@@ -31,7 +31,7 @@ class CorridaTest {
 		
 		resultados.forEach(r -> {
 			Date d = new Date(r.getTempoTotalProva());
-			SimpleDateFormat format = new SimpleDateFormat("mm:SS");
+			SimpleDateFormat format = new SimpleDateFormat("m:s.S");
 			System.out.println(r.getCodigoPiloto() + " " + r.getNomePiloto() + " " + r.getNumeroVoltas() + " " + format.format(d));
 		});
 		
