@@ -32,7 +32,7 @@ class CorridaTest {
 		resultados.forEach(r -> {
 			Date d = new Date(r.getTempoTotalProva());
 			SimpleDateFormat format = new SimpleDateFormat("mm:SS");
-			System.out.println(r.getCodigoPiloto() + " " + r.getNomePiloto() + " " + r.getNumeroVoltas() + format.format(d));
+			System.out.println(r.getCodigoPiloto() + " " + r.getNomePiloto() + " " + r.getNumeroVoltas() + " " + format.format(d));
 		});
 		
 		assertEquals(resultados.get(0).getCodigoPiloto(), "038");

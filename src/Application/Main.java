@@ -6,7 +6,19 @@ public class Main {
 	
 	public static void main(String[] args) {
 		
-		System.out.println("Digite o caminho completo do arquivo de log da caorrida");
+		SCorridaFactory factory = new CorridaFactory("C:\\Users\\User\\eclipse-workspace\\CorridaDeKart\\src\\TestLayer\\CorridaTest.txt");
+		Corrida corrida = factory.ObterCorridaDoArquivoDeLog();
+		
+		List<Resultado> resultados = new ArrayList<Resultado>();
+		
+		resultados = corrida.ObterResultado();
+		
+		resultados.forEach(r -> {
+			Date d = new Date(r.getTempoTotalProva());
+			SimpleDateFormat format = new SimpleDateFormat("m:s.S");
+			System.out.println(r.getCodigoPiloto() + " " + r.getNomePiloto() + " " + r.getNumeroVoltas() + " " + format.format(d));
+		});
+		
 		
 		
 		
